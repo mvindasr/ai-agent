@@ -11,7 +11,7 @@ export const runTool = async (
     toolArgs: JSON.parse(toolCall.function.arguments),
   };
   switch (toolCall.function.name) {
-    case 'weather':
+    case 'get_weather':
       return getWeather(input);
 
     default:
