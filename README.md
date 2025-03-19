@@ -1,33 +1,75 @@
-# Build an AI Agent from Scratch Workshop
+# AI Agent
 
-- Watch the workshop on [Frontend Masters](https://frontendmasters.com/workshops/build-ai-agent/). 
-- View the [course notes](https://clumsy-humor-894.notion.site/Agent-from-scratch-13554fed51a380749554c44aa8989406?pvs=4)
+[![Framework: Node.js](https://img.shields.io/badge/framework-node.js-green.svg)](https://nodejs.org/)
+[![types: typescript](https://img.shields.io/badge/types-typescript-blue.svg)](https://www.typescriptlang.org)
+[![Validation: Zod](https://img.shields.io/badge/validation-zod-blue.svg)](https://zod.dev/)
+[![package manager: npm](https://img.shields.io/badge/package_manager-npm-blue.svg)](https://www.npmjs.com/)
 
-## Setup Instructions
+---
 
-This repo requires **Node.js version 20+** or **bun v1.0.20**.
+**AI Agent** is a command-line application that allows users to interact with an AI agent through various tools. The agent can retrieve information from Reddit, tell dad jokes, and create images using DALL-E.
 
-The `main` branch contains the final application. To code along with the workshop, checkout the `step/1` branch. You will also need an [API Key from OpenAI](https://platform.openai.com/settings/organization/api-keys).
+![Example 1](./public/example1.png)
+![Example 2](./public/example2.png)
+
+---
+
+## Installation
+
+To get started with this project, follow these steps:
+
+1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/Hendrixer/agent-from-scratch.git
-cd agent-from-scratch
-git checkout step/1
-npm install # or bun install
+git clone https://github.com/mvindasr/ai-agent.git
 ```
 
-To run the project:
+2. Navigate to the project directory
 
 ```bash
-npm start
-# or
-bun run index.ts
+cd ai-agent
 ```
 
-## OpenAI API Key
+3. Install all dependencies
 
-Create an [API Key from OpenAI](https://platform.openai.com/settings/organization/api-keys) and save it in a `.env` file:
+```bash
+npm install
+```
 
+4. Setup .env file
+
+Create a `.env` file in the `root` of the project. You can do it by copying the `.env.example` file:
+
+```bash
+cp ./.env.example ./.env
 ```
-OPENAI_API_KEY='YOUR_API_KEY'
+
+> The command assumes a Unix environment where the `cp` command is available.
+
+Once you have the `.env` file, add the environment variable values in the file.
+
+```env
+OPENAI_API_KEY=your-openai-api-key
 ```
+
+## Requirements
+
+This project requires **Node.js version 20+**.
+
+## Usage
+
+Once you have set up the project and installed the dependencies, you can run the application:
+
+```bash
+npm start 'userMessage'
+```
+
+Replace `'userMessage'` with the message you want to send to the AI agent.
+
+## Tools
+
+The AI agent comes with the following tools:
+
+1. **Reddit Tool**: Retrieves information from Reddit.
+2. **Dad Joke Tool**: Tells a dad joke.
+3. **DALL-E Tool**: Creates images using DALL-E.
